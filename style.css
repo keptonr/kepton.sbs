@@ -1,282 +1,154 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
-
-:root {
-  --red: #335ed6;
-  --dark-grey: rgb(42, 42, 42);
-  --light-grey: rgb(27, 29, 34);
+@font-face {
+  font-display: swap;
+  font-family: 'Telia Sans';
+  font-style: normal;
+  src: url("TeliaSans-Regular.woff2") format("woff2");
 }
 
-* {
-  box-sizing: border-box;
-}
-
-::selection {
-  background-color: var(--red);
-  color: white;
-}
-
-html,
 body {
-  font-family: "Fira Code", monospace;
-  background-color: var(--dark-grey);
-  color: white;
-
-  height: 100%;
-  position: relative;
+  font-size: 15px;
+  font-family: Telia Sans;
+  background: #181818;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #ffffffe1
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-content: middle;
-  text-align: center;
-  margin: 0px 2rem 0px 1.5rem;
-  flex-basis: 164px;
+.main {
+  width: 950px;
+  margin: auto;
+  padding: 30px;
 }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  animation: load_animation ease 0.7s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.main h1 {
+  color: #fff font-size;
+  line-height: 36px;
+  width: 80%;
 }
 
-main h2 {
-  margin-top: 35px;
-  margin-bottom: 0.5rem;
+.main h2 {
+  color: #ececec
 }
 
-a {
-  color: var(--red);
+.main h3 {
+  color: #ececec
+}
+
+.main p {
+  margin: 1.10em 0;
+  font-size: 1.08em;
+}
+
+.main .code {
+  white-space: nowrap;
+  background: #3e4756;
+  padding: 2px 5px;
+  border-radius: 3px
+}
+
+.main a {
+  transition: 150ms ease;
+  font-weight: 600;
+  color: #00da24c4;
   text-decoration: none;
+  border-bottom: 0 solid transparent
 }
 
-a:hover {
-  transition: filter 0.3s ease;
-  filter: brightness(1.2);
+.main a:hover {
+  color: #00ff15;
+  border-bottom: 1px solid #ffffff7e
 }
 
-p {
-  font-size: 1.1rem;
+.main .header {
+  margin-bottom: 30px
 }
 
-pre code {
-  background-color: var(--light-grey);
-  color: white;
-  border-radius: 0.5rem;
-
-  display: block;
-  padding: 20px;
-  word-wrap: break-word;
-
-  word-wrap: break-word;
-  overflow-x: auto;
-
-  /* Removes scrollbar from code box */
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
+.main .body .section {
+  margin: 75px 0
 }
 
-code {
-  font-family: "Fira Code Retina", monospace;
-  background-color: var(--light-grey);
-  color: white;
-  padding: 2px;
-  word-wrap: break-word;
+.main .body .section h2::before {
+  content: '>';
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  color: rgba(30, 255, 0, 0.692);
+  width: 2em;
+  margin-left: -2em
 }
 
-h1 {
-  color: var(--red);
-  font-size: 3rem;
-  font-weight: 800;
-  user-select: none;
-  margin-top: 5px;
-  margin-bottom: 20px;
+.main .body .section h3::before {
+  content: '>';
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  color: rgba(30, 255, 0, 0.692);
+  width: 2em;
+  margin-left: -2em
 }
 
-.title {
-  color: var(--red);
-  font-size: 4rem;
-  font-weight: 800;
-  user-select: none;
-  margin-top: 5px;
-  margin-bottom: 20px;
-}
-
-.logo {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  width: 120px;
-  transition: 1s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 1%;
-}
-
-a.menu-item {
-  color: white;
-  padding: 10px;
-  font-size: 1.45rem;
+.topnav {
+  background-color: #333;
+  overflow: hidden;
   border-radius: 5px;
-  margin-bottom: 1rem;
 }
 
-a.menu-item:hover {
-  background-color: var(--red);
-  transition: background-color 0.2s ease;
+.topnav a {
+  float: left;
+  color: #00da24c4;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.topnav a:hover {
+  background-color: #00ff15;
+  transition: ease 0.3s;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00da24c4;
+  color: white;
+}
+
+.topnav a.fi {
+  float: right;
 }
 
 .footer {
-  margin-top: auto;
-}
-
-.main-container {
-  display: flex;
-  min-height: 100vh;
-  position: relative;
-  padding-bottom: 30px;
-}
-
-.post .tag-list {
-  padding-bottom: 0.5rem;
-  display: inline-block;
-}
-
-.tag {
-  color: whitesmoke;
-  text-transform: capitalize;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
-  background-color: var(--light-grey);
-}
-
-.tag:hover {
-  transition: background-color 0.3s ease;
-  background-color: var(--red);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   color: white;
-}
-
-.post-date {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  border-color: var(--light-grey);
-  border-radius: 0.2rem;
-  border-style: solid;
-  border-width: 0.1rem;
-  padding: 0.2rem;
-}
-
-main img {
-  max-width: 100%;
-  height: auto;
-  border: 3px solid;
-  border-color: #0256d3;
-  border-radius: 0.1rem;
-  padding: 0.5rem;
-}
-
-/* TODO: Notice blocks (Like quote blocks in Markdown) */
-
-.notice {
-}
-
-.notice.green {
-}
-
-.notice.yellow {
-}
-
-.notice.red {
-}
-
-/*            */
-/* Animations */
-/*            */
-
-@keyframes load_animation {
-  0% {
-    opacity: 0;
-  }
-
-  50%,
-  100% {
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 660px) {
-  h1 {
-    font-size: 60px;
-  }
-
-  header {
-    margin: 0;
-  }
-
-  .menu {
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  a.menu-item {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  .main-container {
-    flex-direction: column;
-  }
-
-  .logo {
-    padding-top: 1rem;
-    margin-bottom: 2rem;
-    width: 110px;
-    transition: 1s ease;
-  }
-
-  .footer {
-    display: none;
-  }
-}
-
-.highlight {
-  position: relative;
-  background-color: var(--light-grey);
-}
-
-.highlight pre {
-  padding-right: 0px;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.5rem;
-}
-
-.highlight-copy-btn {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  border: 0;
-  border-radius: 4px;
-  padding: 1px;
-  font-size: 0.7em;
-  line-height: 1.8;
-  color: #fff;
-  background-color: #777;
-  min-width: 55px;
+  padding: 5px;
   text-align: center;
+  background-color: #181818;
+  overflow: hidden;
 }
 
-.highlight-copy-btn:hover {
-  background-color: #666;
+@media screen and (max-width: 800px) {
+  .main {
+      width: 85%;
+      min-width: 0;
+  }
+  .footer {
+      position: auto;
+      height: 3em;
+      background-color: #181818a2;
+      left: 0;
+      font-size: small;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main .body .section h2::before {
+      display: inline-block;
+  }
+  .main p {
+      font-size: 0.9em;
+  }
 }
